@@ -1,0 +1,18 @@
+{include 'header.tpl.html' title='Login to account.'}
+
+<form method="post" action="{$smarty.server.PHP_SELF}">
+    <fieldset>
+        <legend>Register</legend><br/>
+        <label>Email:<br/><input type="email" name=":email" /></label><br/><br/>
+        <label>First name:<br/> <input type="text" name=":name_first" /></label><br/><br/>
+        <label>Last name:<br/> <input type="text" name=":name_last" /></label><br/><br/>
+        <label>Phone:<br/> <input type="tel" name=":phone" /></label><br/><br/>
+        <label>Password:<br/> <input type="password" name=":password" /></label><br/><br/>
+        <label>Street:<br/> <input type="text" name=":address_street" /></label><br/><br/>
+        <label>Town:<br/> <input type="text" name=":address_town" /></label><br/><br/>
+        <label>County:<br/> <input type="text" name=":address_county" /></label><br/><br/>
+        <input name="handler" type="submit" value="Register" />
+    </fieldset>
+</form>
+
+{include 'footer.tpl.html'}

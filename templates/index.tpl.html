@@ -1,0 +1,25 @@
+{include file='header.tpl.html' title='EShop'}
+
+<h1>Popular &amp; New</h1>
+
+{include file='books.inc.tpl.html'}
+<br/><br/>
+
+{*
+<form method="get" action="{$smarty.server.PHP_SELF}">
+    <label> Sort by: <select name=":attribte">
+                        <option>title</option>
+                        <option>price</option>
+                        <option>author</option>
+                    </select>
+    </label>
+    <label>    <select name=":order">
+                    <option value="ASC">ascending</option>
+                    <option value="DESC">descending</option>
+                </select>
+    </label>
+    <input type="submit" value="Sort" name="handler" />
+</form>
+*}
+
+{include file='footer.tpl.html'}

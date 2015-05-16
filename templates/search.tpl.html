@@ -1,0 +1,17 @@
+{include file="header.tpl.html" title="Search"}
+
+<h1>Advanced Search</h1>
+
+<form method="get" action="{$smarty.server.PHP_SELF}">
+    <fieldset>
+        <legend>Search</legend><br/>
+        <label>ISBN:<br/><input type="text" name=":isbn" /></label><br/><br/>        
+        <label>Title:<br/><input type="text" name=":title" /></label><br/><br/>
+        <label>Author:<br/><input type="text" name=":author"/></label><br/><br/>
+        <label>Category:<br/><select name=":category" /><option value="" selected="selected">All</option>{foreach from=$categories item=category}<option value="{$category.category}">{$category.category}</option>{/foreach}</select></label><br/><br/>        
+        <label>Description:<br/><input type="text" name=":description" /></label><br/><br/>           
+        <input type="submit" name="handler" value="Search" />        
+    </fieldset>
+</form>
+
+{include file="footer.tpl.html"}

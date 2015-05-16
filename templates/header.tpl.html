@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{$title}</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="logo-holder">
+                    <a href="index.php"><img src="logo.png" alt="eShop Logo" /></a>
+                </div>
+                <div id="quicksearch-holder">
+                    <form method="get" action="search.php">
+                        <input type="text" name=":query" />
+                        <input type="submit" name="handler" value="Quick Search" />
+                    </form>
+                </div>
+                <div id="dummy"></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.php">Popular &amp; New</a></li>
+                        {foreach from=$categories item=category}
+                        <li><a href="search.php?handler=CategorySearch&:category={$category.category}">{$category.category}</a></li>
+                        {/foreach}
+                        <li><a href="search.php?handler=AllCategories">All Categories</a></li>
+                        <li><a href="search.php">Advanced Search</a></li>
+                        {if isset($smarty.session.member.email)}
+                        <li><a href="logout.php">Logout</a></li>
+                        <li><a href="view_saves.php"><img src="basket.png" width="16" height="16"/></a></li>
+                        {else}
+                        <li><a href="login.php">Login</a></li>
+                        <li><a href="register.php">Register</a></li>
+                        {/if}
+                        {if isset($smarty.session.member) and $smarty.session.member.is_admin}
+                        <li><a href="new_book.php">+</a></li>                        
+                        {/if}
+                    </ul>
+                </nav>
+                {if isset($smarty.get.banner) or isset($banner)}
+                <div id="banner" >
+                    {if isset($smarty.get.banner)}
+                    {$smarty.get.banner}
+                    {elseif isset($banner)}
+                    {$banner}
+                    {/if}
+                </div>
+                {/if}
+            </header>
+            <main>

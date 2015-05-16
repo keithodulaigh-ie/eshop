@@ -1,0 +1,6 @@
+{foreach from=$books item=book}
+<div class="item">
+    <a href="view_item.php?:isbn={$book.isbn}"><img src="view_image.php?:isbn={$book.isbn}&handler=ShowSmallImage" width="128" height="167" alt="{$book.title}"/></a><br/>
+    <a href="view_item.php?:isbn={$book.isbn}">{$book.title}<br/>{$book.author_name_first} {$book.author_name_last}</a>
+</div>
+{/foreach}

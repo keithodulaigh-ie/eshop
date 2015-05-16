@@ -1,0 +1,20 @@
+{include 'header.tpl.html' title='Login to account.'}
+
+<form method="post" action="{$smarty.server.PHP_SELF}" enctype="multipart/form-data">
+    <fieldset>
+        <legend>New Book</legend><br/>
+        <label>ISBN:<br/><input type="text" name=":isbn" /></label><br/><br/>
+        <label>Title:<br/><input type="text" name=":title" /></label><br/><br/>
+        <label>Price:<br/><input type="number" name=":price" /></label><br/><br/>
+        <label>Category:<br/><input type="text" name=":category" /></label><br/><br/>
+        <label>Author First Name:<br/><input type="text" name=":author_name_first" /></label><br/><br/>
+        <label>Author Last Name:<br/><input type="text" name=":author_name_last" /></label><br/><br/>
+        <label>Published:<br/><input type="date" name=":published" /></label><br/><br/>
+        <label>Description:<br/><textarea name=":description" /></textarea></label><br/><br/>
+        <label>Small Image:<br/><input type="file" name=":small_image" /></label><br/><br/>
+        <label>Large Image:<br/><input type="file" name=":large_image" /></label><br/><br/>        
+        <input type="submit" name="handler" value="Create Book"/>
+    </fieldset>
+</form>
+
+{include 'footer.tpl.html'}

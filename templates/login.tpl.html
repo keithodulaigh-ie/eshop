@@ -1,0 +1,14 @@
+{include 'header.tpl.html' title='Login to account.'}
+
+<h1>Login</h1>
+
+<form method="post" action="{$smarty.server.PHP_SELF}">
+    <fieldset>
+        <legend>Provide Login Details</legend><br/>
+        <label>Email:<br/><input type="email" name=":email" /></label><br/><br/>
+        <label>Password:<br/><input type="password" name=":password" /></label><br/><br/>
+        <input name="handler" type="submit" value="Login" />
+    </fieldset>
+</form>
+
+{include 'footer.tpl.html'}

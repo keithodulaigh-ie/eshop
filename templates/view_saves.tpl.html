@@ -1,0 +1,19 @@
+{include file='header.tpl.html' title='View Basket'}
+
+{if count($saved_books) ge 1}
+<form method="post" action="{$smarty.server.PHP_SELF}">
+    {foreach from=$saved_books item=book}
+    <div>
+            <img src="view_image.php?:isbn={$book.isbn}&handler=ShowSmallImage" alt="{$book.title}" />            
+            <input type="hidden" name=":isbn[]" value="{$book.isbn}" />
+            <label>Quantity of {$book.title}: <input type="number" min="0" name=":quantity[]" value="{$book.quantity}" /></label>
+    </div>
+    {/foreach}
+    <input type="submit" value="Buy Now" name="handler" />
+    <input type="submit" value="Save Changes for Later" name="handler" />
+</form>
+{else}
+<strong>You have no items in your basket.</strong>
+{/if}
+
+{include file='footer.tpl.html'}

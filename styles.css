@@ -1,0 +1,149 @@
+body {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+}
+
+nav, footer {
+    background-color: #0000A0;
+    color: #ffffff;
+}
+
+nav ul li {
+    display: inline;
+    background-color: #800000;
+    padding: 10px;
+    width: 150px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: #A52A2A;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    padding-top: 15px;
+    text-align: center;
+    width: 780px;
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    padding: 3px 0px 3px 0px;
+    margin-top: 10px;
+}
+
+#container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+/*    border: solid 1px black; */
+    display: inline-block;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+
+input, select {
+    background-color: #0000A0;
+    color: white;
+    border: 0px solid black;
+    padding: 5px;
+}
+
+input, select, textarea {
+    background-color: white;
+    border: 1px solid #0000A0;
+    color: #4C4646;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: #0000A0;    
+}
+
+#logo-holder, #quicksearch-holder {
+    width: 400px;
+    height: 50px;
+    vertical-align: bottom;
+    margin-bottom: 5px;
+}
+
+#logo-holder {
+    float: left;
+    text-align: left;    
+}
+
+#quicksearch-holder {
+    float: right;
+    text-align: right;    
+    padding-top: 25px;
+}
+
+#dummy {
+    clear: both;
+}
+
+#banner {
+    color: white;
+    background-color: #800000;
+    border: 0px solid #0000A0;
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+legend {
+    color: #800000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #A52A2A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0000A0;
+}
+
+a {
+    color: #A52A2A;
+    text-decoration: none;
+}
+
+#item-image {
+    float: left;
+    width: 400px;
+}
+
+#item-details {
+    float: right;
+    width: 400px;
+    text-align: left;
+    padding-top: 50px;
+}
+
+#item-details th {
+    text-align: left;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="default" name="EShop">
+	
+	<property file="build.properties" />
+
+	<target name="default">
+		<antcall target="deploy-local" />
+		<antcall target="view" />
+	</target>
+
+	<target name="deploy-local">
+		<mkdir dir="${server-root}${server-folder}"/>
+		<copy todir="${server-root}${server-folder}">
+			<fileset dir="${basedir}" />
+		</copy>
+	</target>
+	
+	<target name="view">
+		<exec executable="${browser}" spawn="yes">
+			<arg line="${server-address}${server-folder}/index.php" />
+		</exec>
+	</target>
+</project>
